@@ -12,13 +12,16 @@ function PersonalInfo(props) {
     
 
     return (
-        <FormWrapper>
-            <TextInput placeholder="First Name" value={firstName}/>
-            <TextInput placeholder="Last Name" value={lastName}/>
-            <TextInput placeholder="(###)-###-####" value={phone}/>
-            <TextInput placeholder="youremail@domain.com" value={email}/>
-            <TextInput placeholder="1234 Generic Ln, Anytown, USA" value={address}/>
-        </FormWrapper>
+        <StyledDiv>
+            <h2>Personal Information</h2>
+            <FormWrapper>
+                <TextInput placeholder="First Name" value={firstName}/>
+                <TextInput placeholder="Last Name" value={lastName}/>
+                <TextInput placeholder="(###)-###-####" value={phone}/>
+                <TextInput placeholder="youremail@domain.com" value={email}/>
+                <TextInput placeholder="1234 Generic Ln, Anytown, USA" value={address}/>
+            </FormWrapper>
+        </StyledDiv>
     );
 };
 
@@ -31,6 +34,12 @@ const FormWrapper = styled.form`
     margin-bottom: 20px;
     margin-top: 20px;
     width: 50%;
+`; 
+
+const StyledDiv = styled.div`
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 `; 
 
 
