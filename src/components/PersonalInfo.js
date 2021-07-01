@@ -18,7 +18,6 @@ function PersonalInfo(props) {
             <TextInput placeholder="(###)-###-####" value={phone}/>
             <TextInput placeholder="youremail@domain.com" value={email}/>
             <TextInput placeholder="1234 Generic Ln, Anytown, USA" value={address}/>
-            <br></br>
         </FormWrapper>
     );
 };
@@ -27,7 +26,11 @@ const FormWrapper = styled.form`
     display: flex;
     flex-direction: column;
     color: blue;
-    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 50%;
 `; 
 
 

@@ -1,13 +1,12 @@
 import './App.css';
-import PersonalInfo from "./components/PersonalInfo";
-import Education from "./components/Education"
+import Container from "./components/Container";
+
 
 
 function App() {
   return (
     <>
-      <PersonalInfo/>
-      <Education/>
+      <Container/>
     </>
   );
 }

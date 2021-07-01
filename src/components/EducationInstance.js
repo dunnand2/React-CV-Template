@@ -4,7 +4,7 @@ import TextInput from './TextInput';
 import DateInput from './DateInput';
 
 
-function Education(props) {
+function EducationInstance(props) {
     
     const [universityName, setUniversityName] = useState("");
     const [degreeReceived, setDegreeReceived] = useState("");
@@ -13,10 +13,10 @@ function Education(props) {
    
     return (
         <FormWrapper>
-            <StyledTextInput placeholder="University" value={universityName}/>
-            <StyledTextInput placeholder="B.S. - Educational Studies" value={degreeReceived}/>
-            <DateInput value={startDate}/>
-            <DateInput value={endDate}/>
+            <TextInput placeholder="University" value={universityName}/>
+            <TextInput placeholder="B.S. - Educational Studies" value={degreeReceived}/>
+            <DateInput placeholder="Start Date" value={startDate}/>
+            <DateInput placeholder="End Date" value={endDate}/>
         </FormWrapper>
     );
 
@@ -26,11 +26,11 @@ const FormWrapper = styled.form`
     display: flex;
     flex-direction: column;
     color: blue;
-    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 50%;
 `; 
 
-const StyledTextInput = styled(TextInput)`
-    width: 300px;
-`; 
 
-export default Education;
+export default EducationInstance;

@@ -16,8 +16,10 @@ function TextInput(props){
 };
 
 const StyledTextInput = styled.input`
-    width: 300px;
+    width: 50%;
     margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
 `; 
 
 
