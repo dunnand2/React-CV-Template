@@ -3,10 +3,7 @@ import styled from "styled-components";
 
 function TextInput(props){
 
-    
-
     const handleChange = (event) => {
-        console.log(props.onChange)
         props.onChange(event.target.value);
     };
 
