@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 
 function TextInput(props){
-    const [textValue, setTextValue] = useState(props.value);
-    const [placeholder, setPlaceholder] = useState(props.placeholder)
 
-    const onChange = (event) => {
-        setTextValue(event.target.value);
+    
+
+    const handleChange = (event) => {
+        console.log(props.onChange)
+        props.onChange(event.target.value);
     };
 
     return (
-        <StyledTextInput type="text" placeholder={placeholder} value={textValue} onChange={onChange}/>
+        <StyledTextInput type="text" placeholder={props.placeholder} value={props.value} onChange={handleChange}/>
     );
 
 };

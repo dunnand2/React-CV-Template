@@ -19,7 +19,7 @@ function EducationSection(props) {
 
     return(
         <StyledDiv>
-            <h2>Education</h2>
+            <StyledHeader>Education</StyledHeader>
             {educationInstances.map((item, index) => (
                 <div key={item}>
                     <EducationInstance/>
@@ -37,5 +37,9 @@ const StyledDiv = styled.div`
     text-align: center;
     margin-bottom: 10px;
 `; 
+
+const StyledHeader = styled.h2`
+    margin: 0;
+`;
 
 export default EducationSection;

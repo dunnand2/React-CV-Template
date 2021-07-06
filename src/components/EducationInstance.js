@@ -19,7 +19,6 @@ function EducationInstance(props) {
             <DateInput placeholder="End Date" value={endDate}/>
         </FormWrapper>
     );
-
 }
 
 const FormWrapper = styled.form`

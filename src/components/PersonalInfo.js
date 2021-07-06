@@ -4,26 +4,25 @@ import TextInput from './TextInput';
 
 function PersonalInfo(props) {
 
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [phone, setPhone] = useState("");
-    const [email, setEmail] = useState("");
-    const [address, setAddress] = useState("");
-    
+    console.log(props)
 
     return (
         <StyledDiv>
-            <h2>Personal Information</h2>
+            <StyledHeader>Personal Information</StyledHeader>
             <FormWrapper>
-                <TextInput placeholder="First Name" value={firstName}/>
-                <TextInput placeholder="Last Name" value={lastName}/>
-                <TextInput placeholder="(###)-###-####" value={phone}/>
-                <TextInput placeholder="youremail@domain.com" value={email}/>
-                <TextInput placeholder="1234 Generic Ln, Anytown, USA" value={address}/>
+                <TextInput placeholder="First Name" value={props.values.firstName} onChange={props.callbacks.liftFirstName}/>
+                <TextInput placeholder="Last Name" value={props.values.lastName} onChange={props.callbacks.liftLastName}/>
+                <TextInput placeholder="(###)-###-####" value={props.values.phone} onChange={props.callbacks.liftPhone}/>
+                <TextInput placeholder="youremail@domain.com" value={props.values.email} onChange={props.callbacks.liftEmail}/>
+                <TextInput placeholder="1234 Generic Ln, Anytown, USA" value={props.values.address} onChange={props.callbacks.liftAddress}/>
             </FormWrapper>
         </StyledDiv>
     );
 };
+
+const StyledHeader = styled.h2`
+    margin: 0;
+`;
 
 const FormWrapper = styled.form`
     display: flex;
@@ -32,7 +31,6 @@ const FormWrapper = styled.form`
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    margin-top: 20px;
     width: 50%;
 `; 
 
