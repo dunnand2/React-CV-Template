@@ -19,7 +19,7 @@ function PersonalInfoDisplay(props) {
 const BackgroundDiv = styled.div`
     text-align: left;
     width: 8.5in;
-    height: 2in;
+    height: 1.5in;
     background: #14557B;
 `; 
 
